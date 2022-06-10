@@ -372,6 +372,11 @@ const Home = (props) => {
                 </Box>
             </Slide>
             {/* Graph Title */}
+            <Slide direction="up" in={true} mountOnEnter unmountOnExit>
+                <Box m={2} variant="middle" >
+                    <Typography variant="h6">Saving for tertiary education</Typography>
+                </Box>
+            </Slide>
             {/* YEAR OF BIRTH */}
             <Slide direction="up" in={true} mountOnEnter unmountOnExit>
                 <Box m={2} variant="middle" >
