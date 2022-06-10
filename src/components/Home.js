@@ -147,7 +147,7 @@ const Home = (props) => {
                     ],
                 })
                 setAmountChangDelay(false)
-            }, 1500);
+            }, 500);
         }
     }
 
