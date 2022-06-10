@@ -393,9 +393,10 @@ const Home = (props) => {
             {/* AMOUNT */}
             <Slide direction="up" in={true} mountOnEnter unmountOnExit>
                 <Box m={2} variant="middle" >
+                    <Typography >Current Amount In CDA/PSEA</Typography>
                     <CustomSlider
                         valueLabelDisplay="auto"
-                        aria-label="Amount"
+                        aria-label="Current Amount In CDA/PSEA"
                         defaultValue={20}
                         valueLabelFormat={sliderValueText}
                         max={50000}
