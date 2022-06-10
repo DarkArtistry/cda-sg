@@ -51,6 +51,7 @@ const Home = (props) => {
 
     const options = {
         maintainAspectRatio: true,
+        aspectRatio: window.innerWidth <= 500 ? 1.1 : 2,
         responsive: true,
         interaction: {
             intersect: false,
