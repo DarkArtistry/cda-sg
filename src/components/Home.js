@@ -122,7 +122,8 @@ const Home = (props) => {
             setTimeout(() => {
                 const yearValue = year.getFullYear()
                 let targetYear = new Date().getFullYear() > yearValue ? new Date().getFullYear() : yearValue
-                const childAge = targetYear - yearValue
+                let childAge = targetYear - yearValue
+                if (childAge < 0) childAge = 0
                 const {posb, uob, ocbc} = handleCompoundEffect(accountAmount, yearRange, childAge)
                 setChartData({
                     labels: yearRange,
@@ -227,12 +228,15 @@ const Home = (props) => {
         // const defaultDateRange = _.range(new Date().getFullYear(), new Date().getFullYear() + 31).map((eachYear) => eachYear.toString())
         const yearValue = newValue.getFullYear()
         // console.log("yearValue: ", yearValue);
-        const childAge = new Date().getFullYear() - yearValue
+        let childAge = new Date().getFullYear() - yearValue
         // console.log("childAge: ", childAge);
-        const labelMaxRange = 21 - childAge // because PSEA account is only until age 31
+        if (childAge < 0) childAge = 0
+        const labelMaxRange = 21 - childAge // because PSEA account is only until age 31, we only consider age 21
         // console.log("labelMaxRange: ", labelMaxRange);
         // console.log("yearValue + labelMaxRange :", yearValue + labelMaxRange);
         let targetYear = new Date().getFullYear() > yearValue ? new Date().getFullYear() : yearValue
+        console.log('targetYear : ', targetYear);
+        console.log('targetYear + labelMaxRange: ', targetYear + labelMaxRange);
         let XlabelAgeRange = _.range(targetYear , targetYear + labelMaxRange + 1).map((eachYear) => eachYear.toString())
         setYearRange(XlabelAgeRange)
         const {posb, uob, ocbc} = handleCompoundEffect(accountAmount, XlabelAgeRange, childAge)
