@@ -149,7 +149,7 @@ const Home = (props) => {
                     ],
                 })
                 setAmountChangDelay(false)
-            }, 500);
+            }, 200);
         }
     }
 
