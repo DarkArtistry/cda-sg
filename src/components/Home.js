@@ -415,7 +415,12 @@ const Home = (props) => {
                     <Line options={options} data={chartData} />
                 </Box>
             </Slide>
-
+            {/* DISCLAIMERS */}
+            <Slide direction="up" in={true} mountOnEnter unmountOnExit>
+                <Box m={2} variant="middle" >
+                    <Typography >Disclaimers: The interest rates are accurate as of 10th June 2022. Banks will change their interest returns structure.</Typography>
+                </Box>
+            </Slide>
         </Container>
     )
 }
