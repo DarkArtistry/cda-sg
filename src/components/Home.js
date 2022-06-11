@@ -16,6 +16,11 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import TextField from '@mui/material/TextField';
+import EmailIcon from '@mui/icons-material/Email';
+import Link from '@mui/material/Link';
+import IconButton from '@mui/material/IconButton';
+import GitHubIcon from '@mui/icons-material/GitHub';
+
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -29,8 +34,10 @@ import {
 import zoomPlugin from "chartjs-plugin-zoom";
 import { Line } from 'react-chartjs-2';
 import { faker } from '@faker-js/faker';
+import medium_icon from '../app/assets/medium_logo.svg';
 
 var _ = require('lodash');
+
 
 const Home = (props) => {
 
@@ -426,6 +433,28 @@ const Home = (props) => {
             <Slide direction="up" in={true} mountOnEnter unmountOnExit>
                 <Box m={2} variant="middle" >
                     <Typography >Disclaimers: The interest rates are accurate as of 10th June 2022. Banks will change their interest returns structure.</Typography>
+                    <Typography >You contact me to contribute or collaborate on this project.</Typography>
+                </Box>
+            </Slide>
+            {/* CONTACT */}
+            <Slide direction="up" in={true} mountOnEnter unmountOnExit>
+                <Box m={2} variant="middle" >
+                    <Typography >Contacts:</Typography>
+                    <Link href="mailto:kenneth.gzhao@outlook.com">
+                        <IconButton>
+                            <EmailIcon/>
+                        </IconButton>
+                    </Link>
+                    <Link href="https://github.com/DarkArtistry/cda-sg">
+                        <IconButton>
+                            <GitHubIcon/>
+                        </IconButton>
+                    </Link>
+                    <Link href="https://medium.com/@kenneth.gzhao">
+                        <IconButton>
+                            <img src={medium_icon} height={25} width={25}/>
+                        </IconButton>
+                    </Link>
                 </Box>
             </Slide>
         </Container>
