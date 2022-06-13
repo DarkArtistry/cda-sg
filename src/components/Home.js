@@ -433,7 +433,7 @@ const Home = (props) => {
             <Slide direction="up" in={true} mountOnEnter unmountOnExit>
                 <Box m={2} variant="middle" >
                     <Typography >Disclaimers: The interest rates are accurate as of 10th June 2022. Banks will change their interest returns structure.</Typography>
-                    <Typography >You contact me to contribute or collaborate on this project.</Typography>
+                    <Typography >You can contact me to contribute or collaborate on this project.</Typography>
                 </Box>
             </Slide>
             {/* CONTACT */}
